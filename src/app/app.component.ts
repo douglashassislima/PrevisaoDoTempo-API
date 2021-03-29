@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 
+import * as moment from 'moment-timezone';
+import 'moment/locale/pt-br';
+
 @Component({
-  selector: 'spa-root',
+  selector: 'jv-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'previsadotempo-api';
+
+  constructor() {
+    moment.locale('pt-br');
+  }
 }
